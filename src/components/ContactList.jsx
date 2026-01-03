@@ -9,7 +9,7 @@ const ContactList = ({ contacts, refresh }) => {
 
     try {
       await axios.delete(`https://contact-form-backend-xk3b.onrender.com/api/contacts/${id}`);
-      toast.delete("Information Delete...!")
+      toast.info("Information Delete...!")
       refresh(); 
     } catch (err) {
       console.error("Delete failed", err);
