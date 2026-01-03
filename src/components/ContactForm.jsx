@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 const ContactForm = ({ refresh }) => {
   const [form, setForm] = useState({
@@ -20,7 +21,7 @@ const ContactForm = ({ refresh }) => {
     }
 
     await axios.post("https://contact-form-backend-xk3b.onrender.com/api/contacts", form);
-
+    toast.success("Information Submit..!")
     setForm({ name: "", email: "", phone: "", message: "" });
     setError("");
     refresh();
