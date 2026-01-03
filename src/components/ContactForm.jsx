@@ -19,7 +19,7 @@ const ContactForm = ({ refresh }) => {
       return;
     }
 
-    await axios.post("http://localhost:5000/api/contacts", form);
+    await axios.post("https://contact-form-backend-xk3b.onrender.com", form);
 
     setForm({ name: "", email: "", phone: "", message: "" });
     setError("");

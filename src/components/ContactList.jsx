@@ -7,7 +7,7 @@ const ContactList = ({ contacts, refresh }) => {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/contacts/${id}`);
+      await axios.delete(`https://contact-form-backend-xk3b.onrender.com/${id}`);
       refresh(); 
     } catch (err) {
       console.error("Delete failed", err);
